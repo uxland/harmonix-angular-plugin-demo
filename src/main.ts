@@ -1,6 +1,25 @@
-import { bootstrapApplication } from '@angular/platform-browser';
-import { appConfig } from './app/app.config';
-import { AppComponent } from './app/app.component';
+import { bootstrapPlugins, initializeShell } from "@uxland/primary-shell";
+import "@uxland/primary-shell/dist/style.css";
+import { plugins } from "./plugins";
 
-bootstrapApplication(AppComponent, appConfig)
-  .catch((err) => console.error(err));
+const createAndAppendSandboxApp = () => {
+  const app = document.createElement("sandbox-app");
+  document.body.appendChild(app);
+  const sandbox = document.querySelector("sandbox-app");
+  return sandbox as HTMLElement;
+}
+
+const initializeSandboxApp = (sandbox: HTMLElement) => {
+  try {
+    if (sandbox) {
+        initializeShell(sandbox);
+        bootstrapPlugins(plugins);
+      }
+    }
+    catch (error) {
+      console.warn(error);
+    }
+ }
+
+const sandbox = createAndAppendSandboxApp();
+initializeSandboxApp(sandbox);

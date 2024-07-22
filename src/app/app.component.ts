@@ -1,12 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from "@angular/core";
 
 @Component({
-  selector: 'app-root',
   standalone: true,
   imports: [],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  templateUrl: "./app.component.html",
+  styleUrl: "./app.component.css",
+  encapsulation: ViewEncapsulation.ShadowDom
 })
 export class AppComponent {
-  title = 'nombre-de-tu-proyecto';
+  title = "angular-module";
 }

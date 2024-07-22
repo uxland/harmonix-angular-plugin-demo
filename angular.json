@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "nombre-de-tu-proyecto": {
+    "angular-plugin-demo": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/nombre-de-tu-proyecto",
+            "outputPath": "dist/angular-plugin-demo",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -59,10 +59,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "nombre-de-tu-proyecto:build:production"
+              "buildTarget": "angular-plugin-demo:build:production"
             },
             "development": {
-              "buildTarget": "nombre-de-tu-proyecto:build:development"
+              "buildTarget": "angular-plugin-demo:build:development"
             }
           },
           "defaultConfiguration": "development"

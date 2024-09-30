@@ -16,9 +16,9 @@ export const initialize = (api: PrimariaApi) => {
     api.regionManager.registerMainView({
       id: "plugin-main-view",
       factory: viewAngularFactory(app, AppComponent),
-    } as any, "Angular plugin")
+    } as any)
 
-    api.regionManager.registerQuickAction({
+    api.regionManager.registerView(shellRegions.navigationMenu,{
       id: "plugin-quick-action",
       factory: () => Promise.resolve(new PrimariaMenuItem("add_circle_outline", "Angular plugin", () => {
         api.regionManager.activateMainView("plugin-main-view")

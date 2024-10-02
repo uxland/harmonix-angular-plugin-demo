@@ -18,6 +18,9 @@
     "paths": {
       "plugin": [
         "./dist/plugin"
+      ],
+      "plugin2": [
+        "./dist/plugin2"
       ]
     },
     "importHelpers": true,

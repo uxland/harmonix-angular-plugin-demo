@@ -1,31 +1,27 @@
-import { ApplicationRef, NgZone, Type } from "@angular/core";
+import "@angular/compiler";
 import { createApplication } from "@angular/platform-browser";
 import { PrimariaApi, PrimariaMenuItem, shellRegions } from "@uxland/primary-shell";
-import { AppComponent } from "./app/app.component";
+import { mainViewFactory } from "./views/main/factory";
 
-const viewAngularFactory = <C>(app: ApplicationRef, component: Type<C>): () => Promise<HTMLElement> => () => {
-  const host = document.createElement("host-component");
-  app.injector.get(NgZone).run(() => app.bootstrap(component, host));
-  return Promise.resolve(host);
-}
+
 
 export const initialize = (api: PrimariaApi) => {
   console.log(`Plugin ${api.pluginInfo.pluginId} initialized`);
-
+  console.log(api.regionManager.getRegion(shellRegions.navigationMenu));
   createApplication().then((app) => {
     api.regionManager.registerMainView({
-      id: "plugin-main-view",
-      factory: viewAngularFactory(app, AppComponent),
+      id: "plugin-main-view", 
+      factory: mainViewFactory(app),
     } as any)
 
     api.regionManager.registerView(shellRegions.navigationMenu,{
       id: "plugin-quick-action",
-      factory: () => Promise.resolve(new PrimariaMenuItem("bolt", "Angular plugin", () => {
+      factory: () => Promise.resolve(new PrimariaMenuItem("bolt", "Angular plugin 2", () => {
         api.regionManager.activateMainView("plugin-main-view")
       })),
     });
   });
-
+  
   return Promise.resolve();
 };
 

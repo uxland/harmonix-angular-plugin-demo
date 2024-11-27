@@ -3,11 +3,11 @@ import { Component, ViewEncapsulation, CUSTOM_ELEMENTS_SCHEMA } from "@angular/c
 @Component({
   standalone: true,
   imports: [],
-  templateUrl: "./app.component.html",
-  styleUrl: "./app.component.css",
+  templateUrl: "./main-view.component.html",
+  styleUrl: "./main-view.component.css",
   encapsulation: ViewEncapsulation.ShadowDom,
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class AppComponent {
+export class MainViewComponent {
   title = "angular-module";
 }

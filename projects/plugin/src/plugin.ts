@@ -1,7 +1,7 @@
 import "@angular/compiler";
 import { createApplication } from "@angular/platform-browser";
 import { PrimariaApi, PrimariaMenuItem, shellRegions } from "@uxland/primary-shell";
-import { mainViewFactory } from "./views/main/factory";
+import { mainViewFactory } from "./views/main-view/factory";
 
 
 

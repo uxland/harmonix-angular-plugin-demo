@@ -15,6 +15,14 @@
     "declaration": false,
     "experimentalDecorators": true,
     "moduleResolution": "bundler",
+    "paths": {
+      "plugin": [
+        "./dist/plugin"
+      ],
+      "plugin2": [
+        "./dist/plugin2"
+      ]
+    },
     "importHelpers": true,
     "target": "ES2022",
     "module": "ES2022",

@@ -20,7 +20,7 @@ export const initialize = (api: PrimariaApi) => {
 
     api.regionManager.registerView(shellRegions.navigationMenu,{
       id: "plugin-quick-action",
-      factory: () => Promise.resolve(new PrimariaMenuItem("add_circle_outline", "Angular plugin", () => {
+      factory: () => Promise.resolve(new PrimariaMenuItem("bolt", "Angular plugin", () => {
         api.regionManager.activateMainView("plugin-main-view")
       })),
     });

@@ -1,4 +1,5 @@
-import { ApplicationRef, NgZone, Type } from "@angular/core";
+import "@angular/compiler";
+import { ApplicationRef, Inject, Injector, NgZone, Type } from "@angular/core";
 import { createApplication } from "@angular/platform-browser";
 import { PrimariaApi, PrimariaMenuItem, shellRegions } from "@uxland/primary-shell";
 import { AppComponent } from "./app/app.component";
@@ -11,10 +12,10 @@ const viewAngularFactory = <C>(app: ApplicationRef, component: Type<C>): () => P
 
 export const initialize = (api: PrimariaApi) => {
   console.log(`Plugin ${api.pluginInfo.pluginId} initialized`);
-
+  console.log(api.regionManager.getRegion(shellRegions.navigationMenu));
   createApplication().then((app) => {
     api.regionManager.registerMainView({
-      id: "plugin-main-view",
+      id: "plugin-main-view", 
       factory: viewAngularFactory(app, AppComponent),
     } as any)
 
@@ -25,7 +26,7 @@ export const initialize = (api: PrimariaApi) => {
       })),
     });
   });
-
+  
   return Promise.resolve();
 };
 

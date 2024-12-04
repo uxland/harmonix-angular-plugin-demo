@@ -9,27 +9,19 @@
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "sourceMap": true,
-    "declaration": false,
-    "experimentalDecorators": true,
-    "moduleResolution": "bundler",
     "paths": {
-      "plugin": [
-        "./dist/plugin"
-      ],
-      "plugin2": [
-        "./dist/plugin2"
+      "my-plugin": [
+        "./dist/my-plugin"
       ]
     },
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "bundler",
     "importHelpers": true,
     "target": "ES2022",
-    "module": "ES2022",
-    "lib": [
-      "ES2022",
-      "dom"
-    ]
+    "module": "ES2022"
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

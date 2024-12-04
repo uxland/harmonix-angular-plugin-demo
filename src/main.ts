@@ -1,23 +1,24 @@
 import { bootstrapPlugins, initializeShell } from "@uxland/primary-shell";
-import "@uxland/primary-shell/dist/style.css";
+import "@uxland/primary-shell/dist/style.css"; // Afegim els estils globals del shell i el Design System
 import { plugins } from "./plugins";
 
+// Creem un contenidor HTML on injectarem el shell més endavant
 const createAndAppendSandboxApp = () => {
-  const app = document.createElement("sandbox-app");
-  document.body.appendChild(app);
-  const sandbox = document.querySelector("sandbox-app");
-  return sandbox as HTMLElement;
+    const app = document.createElement("sandbox-app");
+    document.body.appendChild(app);
+    const sandbox = document.querySelector("sandbox-app");
+    return sandbox as HTMLElement;
 }
-
+// Inicialitzem el sandbox i l'aplicació
 const initializeSandboxApp = (sandbox: HTMLElement) => {
-  try {
-    if (sandbox) {
-        initializeShell(sandbox);
-        bootstrapPlugins(plugins);
-      }
+    try {
+        if (sandbox) {
+            initializeShell(sandbox);
+            bootstrapPlugins(plugins); // Cridem a la funció d'inicialització de tots els plugins
+        }
     }
     catch (error) {
-      console.warn(error);
+        console.warn(error);
     }
  }
 

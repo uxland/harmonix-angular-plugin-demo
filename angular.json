@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-plugin-demo": {
+    "harmonix-angular-plugin-demo": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/angular-plugin-demo",
+            "outputPath": "dist/harmonix-angular-plugin-demo",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -41,8 +41,8 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kB",
-                  "maximumError": "4kB"
+                  "maximumWarning": "4kB",
+                  "maximumError": "8kB"
                 }
               ],
               "outputHashing": "all"
@@ -59,10 +59,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "angular-plugin-demo:build:production"
+              "buildTarget": "harmonix-angular-plugin-demo:build:production"
             },
             "development": {
-              "buildTarget": "angular-plugin-demo:build:development"
+              "buildTarget": "harmonix-angular-plugin-demo:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -92,23 +92,23 @@
         }
       }
     },
-    "plugin": {
+    "my-plugin": {
       "projectType": "library",
-      "root": "projects/plugin",
-      "sourceRoot": "projects/plugin/src",
+      "root": "projects/my-plugin",
+      "sourceRoot": "projects/my-plugin/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "project": "projects/plugin/ng-package.json"
+            "project": "projects/my-plugin/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/plugin/tsconfig.lib.prod.json"
+              "tsConfig": "projects/my-plugin/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/plugin/tsconfig.lib.json"
+              "tsConfig": "projects/my-plugin/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
@@ -116,40 +116,7 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "tsConfig": "projects/plugin/tsconfig.spec.json",
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ]
-          }
-        }
-      }
-    },
-    "plugin2": {
-      "projectType": "library",
-      "root": "projects/plugin2",
-      "sourceRoot": "projects/plugin2/src",
-      "prefix": "lib",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-angular:ng-packagr",
-          "options": {
-            "project": "projects/plugin2/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "projects/plugin2/tsconfig.lib.prod.json"
-            },
-            "development": {
-              "tsConfig": "projects/plugin2/tsconfig.lib.json"
-            }
-          },
-          "defaultConfiguration": "production"
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "tsConfig": "projects/plugin2/tsconfig.spec.json",
+            "tsConfig": "projects/my-plugin/tsconfig.spec.json",
             "polyfills": [
               "zone.js",
               "zone.js/testing"
@@ -158,8 +125,5 @@
         }
       }
     }
-  },
-  "cli": {
-    "analytics": false
   }
 }

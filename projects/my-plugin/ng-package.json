@@ -3,5 +3,6 @@
   "dest": "../../dist/my-plugin",
   "lib": {
     "entryFile": "src/plugin.ts"
-  }
+  },
+  "allowedNonPeerDependencies": ["@angular/forms"]
 }

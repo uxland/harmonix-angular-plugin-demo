@@ -1,9 +1,8 @@
 import { createApplication } from "@angular/platform-browser";
-import { PrimariaApi, PrimariaMenuItem, shellRegions } from "@uxland/primary-shell";
+import { PrimariaApi, PrimariaNavItem, shellRegions } from "@uxland/primary-shell";
 import { viewFactory } from "./views/main-view/factory";
 
 export const initialize = (api: PrimariaApi) => {
-    console.log("")
     createApplication().then((app) => {
         console.log("App initialized")
         api.regionManager.registerMainView({
@@ -11,10 +10,17 @@ export const initialize = (api: PrimariaApi) => {
           factory: viewFactory(app), 
         }); //Registrem la vista a la regio main amb la factoria declarada
         api.regionManager.registerView(shellRegions.navigationMenu,{
-            id: "plugin-quick-action",
-            factory: () => Promise.resolve(new PrimariaMenuItem("add_circle_outline", "Angular plugin", () => {
-              api.regionManager.activateMainView("plugin-main-view");
-            })),
+            id: "plugin-navigation-menu",
+            factory: () => {
+              const menuItem = new PrimariaNavItem({
+                icon: "bolt",
+                label: "Angular plugin",
+                callbackFn: () => {
+                  api.regionManager.activateMainView("plugin-main-view");
+                },
+              });
+              return Promise.resolve(menuItem);
+            },
           });
       });
     return Promise.resolve();

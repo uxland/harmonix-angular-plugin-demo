@@ -1,6 +1,8 @@
+import "@angular/compiler";
 import { createApplication } from "@angular/platform-browser";
 import { PrimariaApi, PrimariaNavItem, shellRegions } from "@uxland/primary-shell";
 import { viewFactory } from "./views/main-view/factory";
+
 
 export const initialize = (api: PrimariaApi) => {
     createApplication().then((app) => {

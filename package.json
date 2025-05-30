@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --host 0.0.0.0",
-    "build": "ng build",
+    "build:plugin": "ng build my-plugin --configuration production && vite build --config vite.postbuild.config.ts",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -21,6 +21,7 @@
     "@uxland/primary-shell": "^5.2.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
+    "date-fns": "4.1.0",
     "zone.js": "~0.14.3"
   },
   "devDependencies": {
@@ -35,6 +36,7 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "ng-packagr": "^18.1.0",
-    "typescript": "~5.5.2"
+    "typescript": "~5.5.2",
+    "react-dom": "18.2.0"
   }
 }

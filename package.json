@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --host 0.0.0.0",
-    "build:plugin": "ng build my-plugin --configuration production && vite build --config vite.postbuild.config.ts",
+    "build:plugin": "ng build my-plugin --configuration production && cd projects/my-plugin && vite build --config vite.postbuild.config.ts",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

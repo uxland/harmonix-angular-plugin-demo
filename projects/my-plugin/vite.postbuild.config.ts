@@ -1,12 +1,13 @@
 import { defineConfig } from 'vite';
 import path from 'path';
+import pckg from './package.json';
 
 export default defineConfig({
   build: {
     lib: {
-      entry: path.resolve(__dirname, 'dist/my-plugin/fesm2022/my-plugin.mjs'),
+      entry: path.resolve(__dirname, `dist/fesm2022/${pckg.name}.mjs`),
       formats: ['es'],
-      fileName: 'my-plugin-bundled'
+      fileName: () => `${pckg.name}-bundled.js`
     },
     rollupOptions: {
       external: ['@angular/core', '@angular/common', '@angular/platform-browser', '@uxland/primary-shell']

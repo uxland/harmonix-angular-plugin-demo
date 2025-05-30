@@ -10,7 +10,17 @@ export default defineConfig({
       fileName: () => `${pckg.name}-bundled.js`
     },
     rollupOptions: {
-      external: ['@angular/core', '@angular/common', '@angular/platform-browser', '@uxland/primary-shell']
+      external: [
+        '@angular/animations',
+        '@angular/common',
+        '@angular/compiler',
+        '@angular/core',
+        '@angular/forms',
+        '@angular/platform-browser',
+        '@angular/router',
+        '@uxland/primary-shell',
+        'rxjs'
+      ]
     }
   }
 });

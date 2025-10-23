@@ -1,5 +1,4 @@
 import { bootstrapPlugins, initializeShell } from "@uxland/primary-shell";
-import "@uxland/primary-shell/dist/style.css"; // Afegim els estils globals del shell i el Design System
 import { plugins } from "./plugins";
 
 // Creem un contenidor HTML on injectarem el shell més endavant

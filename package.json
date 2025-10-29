@@ -19,9 +19,13 @@
     "@angular/platform-browser-dynamic": "^18.1.0",
     "@angular/router": "^18.1.0",
     "@uxland/primary-shell": "^7.13.2",
+    "@uxland/regions": "^1.0.0",
+    "date-fns": "4.1.0",
+    "lit": "^3.0.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
-    "date-fns": "4.1.0",
     "zone.js": "~0.14.3"
   },
   "devDependencies": {

@@ -7,5 +7,5 @@ const adminClinicalMonitoringImporter: () => Promise<Plugin> = () => import("../
 export const plugins: PluginDefinition[] = [
   { pluginId: "angular-plugin", importer: importer },
   { pluginId: "clinical-monitoring", importer: clinicalMonitoringImporter },
-  /* { pluginId: "admin-clinical-monitoring", importer: adminClinicalMonitoringImporter }, */
+  // { pluginId: "admin-clinical-monitoring", importer: adminClinicalMonitoringImporter },
 ]

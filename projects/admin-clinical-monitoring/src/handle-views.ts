@@ -1,9 +1,10 @@
 import { PrimariaApi, PrimariaNavItem } from "@uxland/primary-shell";
-import { customElement } from "lit/decorators.js";
 import { AdminClinicalMonitoring } from "./views/admin-clinical-monitoring/admin-clinical-monitoring";
 
 export const registerViews = async (api: PrimariaApi) => {
-  customElement("clinical-monitoring")(AdminClinicalMonitoring);
+  if (!customElements.get("clinical-monitoring")) {
+    customElements.define("clinical-monitoring", AdminClinicalMonitoring as any);
+  }
   api.regionManager.registerMainView({
     id: api.pluginInfo.pluginId,
     factory: () => {

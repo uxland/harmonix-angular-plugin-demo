@@ -1,8 +1,10 @@
 import { PluginDefinition, Plugin } from "@uxland/primary-shell";
 
 const importer: () => Promise<Plugin> = () => import("../projects/my-plugin/src/plugin") as any;
-const clinicalMonitoringImporter: () => Promise<Plugin> = () => import("../projects/clinical-monitoring/src/plugin") as any;
-const adminClinicalMonitoringImporter: () => Promise<Plugin> = () => import("../projects/admin-clinical-monitoring/src/plugin") as any;
+// @ts-ignore
+const clinicalMonitoringImporter: () => Promise<Plugin> = () => import("./clinical-monitoring.js") as any;
+// @ts-ignore
+const adminClinicalMonitoringImporter: () => Promise<Plugin> = () => import("./admin-clinical-monitoring.js") as any;
 
 export const plugins: PluginDefinition[] = [
   { pluginId: "angular-plugin", importer: importer },

@@ -18,7 +18,7 @@
     "@angular/platform-browser": "^18.1.0",
     "@angular/platform-browser-dynamic": "^18.1.0",
     "@angular/router": "^18.1.0",
-    "@uxland/primary-shell": "^7.13.2",
+    "@uxland/primary-shell": "^7.20.0",
     "@uxland/regions": "^1.0.0",
     "date-fns": "4.1.0",
     "lit": "^3.0.0",

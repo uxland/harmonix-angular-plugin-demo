@@ -33,8 +33,8 @@ importers:
         specifier: ^18.1.0
         version: 18.2.14(@angular/common@18.2.14(@angular/core@18.2.14(rxjs@7.8.2)(zone.js@0.14.10))(rxjs@7.8.2))(@angular/core@18.2.14(rxjs@7.8.2)(zone.js@0.14.10))(@angular/platform-browser@18.2.14(@angular/animations@18.2.14(@angular/core@18.2.14(rxjs@7.8.2)(zone.js@0.14.10)))(@angular/common@18.2.14(@angular/core@18.2.14(rxjs@7.8.2)(zone.js@0.14.10))(rxjs@7.8.2))(@angular/core@18.2.14(rxjs@7.8.2)(zone.js@0.14.10)))(rxjs@7.8.2)
       '@uxland/primary-shell':
-        specifier: 8.0.0-rc.0
-        version: 8.0.0-rc.0
+        specifier: 8.0.0-rc.2
+        version: 8.0.0-rc.2
       date-fns:
         specifier: 4.1.0
         version: 4.1.0
@@ -2144,8 +2144,8 @@ packages:
   '@uxland/lit-utilities@1.0.0':
     resolution: {integrity: sha512-zypSEO2tivQ8+OG3TTq5X/8BU1b09POnjS5S1K5PiWy4jnJzD9JwGEF3vX4btRMafBzIpzI4FiRbLiwR2lRTYA==}
 
-  '@uxland/primary-shell@8.0.0-rc.0':
-    resolution: {integrity: sha512-ca3Di263cL8vvlHqx+ox19QjBSED0XSzAyfYL34XdGjOzk66yHgLgI+t3rFlnQDPQdNhWOIv9+hJy1HEbM58Ew==}
+  '@uxland/primary-shell@8.0.0-rc.2':
+    resolution: {integrity: sha512-kNuTxi1k88DXNbbpfsqukHsW58F+eslAlR7MMFdlewIPf8M2wmyLIfY0hUAG6buMWpxHK4zqOehs2bWOdOuH5Q==}
 
   '@uxland/ramda-extensions@1.0.3':
     resolution: {integrity: sha512-TG9Yi1mZoV8oSYZj+zBeIGTOFdY/rxHPQeM0rbB1uI9u4DeKdAHZfU4XthpKs41bwn31gYy9MQ4MBQwPOqdKvg==}
@@ -4968,7 +4968,7 @@ snapshots:
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@angular-devkit/architect': 0.1802.21(chokidar@3.6.0)
-      '@angular-devkit/build-webpack': 0.1802.21(chokidar@3.6.0)(webpack-dev-server@5.2.2(tslib@2.6.3)(webpack@5.94.0(esbuild@0.23.0)(postcss@8.4.41)))(webpack@5.94.0(esbuild@0.23.0)(postcss@8.4.41))
+      '@angular-devkit/build-webpack': 0.1802.21(chokidar@3.6.0)(webpack-dev-server@5.2.2(tslib@2.6.3)(webpack@5.94.0(postcss@8.4.41)))(webpack@5.94.0(esbuild@0.23.0)(postcss@8.4.41))
       '@angular-devkit/core': 18.2.21(chokidar@3.6.0)
       '@angular/build': 18.2.21(@angular/compiler-cli@18.2.14(@angular/compiler@18.2.14(@angular/core@18.2.14(rxjs@7.8.2)(zone.js@0.14.10)))(typescript@5.5.4))(@types/node@26.1.2)(chokidar@3.6.0)(less@4.2.0)(postcss@8.4.41)(terser@5.31.6)(typescript@5.5.4)
       '@angular/compiler-cli': 18.2.14(@angular/compiler@18.2.14(@angular/core@18.2.14(rxjs@7.8.2)(zone.js@0.14.10)))(typescript@5.5.4)
@@ -5024,8 +5024,8 @@ snapshots:
       typescript: 5.5.4
       watchpack: 2.4.1
       webpack: 5.94.0(esbuild@0.23.0)(postcss@8.4.41)
-      webpack-dev-middleware: 7.4.2(tslib@2.6.3)(webpack@5.94.0(esbuild@0.23.0)(postcss@8.4.41))
-      webpack-dev-server: 5.2.2(tslib@2.6.3)(webpack@5.94.0(esbuild@0.23.0)(postcss@8.4.41))
+      webpack-dev-middleware: 7.4.2(tslib@2.6.3)(webpack@5.94.0(postcss@8.4.41))
+      webpack-dev-server: 5.2.2(tslib@2.6.3)(webpack@5.94.0(postcss@8.4.41))
       webpack-merge: 6.0.1
       webpack-subresource-integrity: 5.1.0(webpack@5.94.0(esbuild@0.23.0)(postcss@8.4.41))
     optionalDependencies:
@@ -5057,12 +5057,12 @@ snapshots:
       - utf-8-validate
       - webpack-cli
 
-  '@angular-devkit/build-webpack@0.1802.21(chokidar@3.6.0)(webpack-dev-server@5.2.2(tslib@2.6.3)(webpack@5.94.0(esbuild@0.23.0)(postcss@8.4.41)))(webpack@5.94.0(esbuild@0.23.0)(postcss@8.4.41))':
+  '@angular-devkit/build-webpack@0.1802.21(chokidar@3.6.0)(webpack-dev-server@5.2.2(tslib@2.6.3)(webpack@5.94.0(postcss@8.4.41)))(webpack@5.94.0(esbuild@0.23.0)(postcss@8.4.41))':
     dependencies:
       '@angular-devkit/architect': 0.1802.21(chokidar@3.6.0)
       rxjs: 7.8.1
       webpack: 5.94.0(esbuild@0.23.0)(postcss@8.4.41)
-      webpack-dev-server: 5.2.2(tslib@2.6.3)(webpack@5.94.0(esbuild@0.23.0)(postcss@8.4.41))
+      webpack-dev-server: 5.2.2(tslib@2.6.3)(webpack@5.94.0(postcss@8.4.41))
     transitivePeerDependencies:
       - chokidar
 
@@ -7047,7 +7047,7 @@ snapshots:
       lit: 2.8.0
       ramda: 0.27.2
 
-  '@uxland/primary-shell@8.0.0-rc.0':
+  '@uxland/primary-shell@8.0.0-rc.2':
     dependencies:
       '@uxland/harmonix': 1.1.6
       '@uxland/harmonix-adapters': 1.3.0
@@ -9973,7 +9973,7 @@ snapshots:
 
   weak-lru-cache@1.2.2: {}
 
-  webpack-dev-middleware@7.4.2(tslib@2.6.3)(webpack@5.94.0(esbuild@0.23.0)(postcss@8.4.41)):
+  webpack-dev-middleware@7.4.2(tslib@2.6.3)(webpack@5.94.0(postcss@8.4.41)):
     dependencies:
       colorette: 2.0.20
       memfs: 4.64.0(tslib@2.6.3)
@@ -9986,7 +9986,7 @@ snapshots:
     transitivePeerDependencies:
       - tslib
 
-  webpack-dev-server@5.2.2(tslib@2.6.3)(webpack@5.94.0(esbuild@0.23.0)(postcss@8.4.41)):
+  webpack-dev-server@5.2.2(tslib@2.6.3)(webpack@5.94.0(postcss@8.4.41)):
     dependencies:
       '@types/bonjour': 3.5.13
       '@types/connect-history-api-fallback': 1.5.4
@@ -10014,7 +10014,7 @@ snapshots:
       serve-index: 1.9.2
       sockjs: 0.3.24
       spdy: 4.0.2
-      webpack-dev-middleware: 7.4.2(tslib@2.6.3)(webpack@5.94.0(esbuild@0.23.0)(postcss@8.4.41))
+      webpack-dev-middleware: 7.4.2(tslib@2.6.3)(webpack@5.94.0(postcss@8.4.41))
       ws: 8.21.1
     optionalDependencies:
       webpack: 5.94.0(esbuild@0.23.0)(postcss@8.4.41)
